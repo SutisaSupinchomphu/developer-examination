@@ -95,7 +95,6 @@ const delete_item = (async (req, res) => {
             return res.status(404).json({ message: `cannot find any product with ID ${id}` })
         }
         // res.status(200).json(product);
-        // res.send({status: 200,success: 'Delete item success!'});
         return res.status(200).json({
             status:200,
             message: 'Delete item success!'
