@@ -10,7 +10,12 @@ const get_all_items = (async (req, res) => {
 
             console.log(products);
             // res.status(200).json(products);
-            res.json({ status:'200' , message:'success' , data: products});
+            // res.json({ status:'200' , message:'success' , data: products});
+            return res.status(200).json({
+                status:200,
+                message: 'OK',
+                data: products
+            })
        
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -28,7 +33,11 @@ const insert_item = (async(req, res) => {
 
         // res.status(200).json(product);
         // res.json({ status:'200' , message:'Insert item success!'});
-        res.send({status: 200,success: 'OK',data :product});
+        // res.send({status: 200,success: 'OK',data :product});
+        return res.status(200).json({
+            status:200,
+            message: 'OK'
+        })
        
     } catch (error) {
         console.log(error.message);
@@ -42,7 +51,12 @@ const get_item_by_id = (async (req, res) => {
     try {
         const { id } = req.params;
         const product = await Product.findById(id);
-        res.status(200).json(product);
+        // res.status(200).json(product);
+        return res.status(200).json({
+            status:200,
+            message: 'OK',
+            data: product
+        })
     } catch (error) {
         res.status(500).json({ message: error.message })
     }
@@ -61,7 +75,10 @@ const update_item = (async (req, res) => {
         const updatedProduct = await Product.findById(id);
         // res.status(200).json(updatedProduct);
         // res.json({ status:'200' , message:'Update item success!'});
-        res.send({status: 200,success: 'Update item success!',data :updatedProduct});
+        return res.status(200).json({
+            status:200,
+            message: 'OK'
+        })
 
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -78,7 +95,11 @@ const delete_item = (async (req, res) => {
             return res.status(404).json({ message: `cannot find any product with ID ${id}` })
         }
         // res.status(200).json(product);
-        res.send({status: 200,success: 'Delete item success!'});
+        // res.send({status: 200,success: 'Delete item success!'});
+        return res.status(200).json({
+            status:200,
+            message: 'Delete item success!'
+        })
 
     } catch (error) {
         res.status(500).json({ message: error.message })
