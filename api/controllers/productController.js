@@ -34,8 +34,8 @@ const insert_item = (async(req, res) => {
         // res.status(200).json(product);
         // res.json({ status:'200' , message:'Insert item success!'});
         // res.send({status: 200,success: 'OK',data :product});
-        return res.status(200).json({
-            status:200,
+        return res.status(201).json({
+            status:201,
             message: 'OK'
         })
        
