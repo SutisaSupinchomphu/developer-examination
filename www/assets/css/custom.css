@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'PakkadThin';
+    src: url("../fonts/PakkadThin.ttf");
+    font-style: normal;
+}
+
+body {
+    font-family: "PakkadThin" !important;
+    font-size: 1.2rem !important;
+
+}
+
+.create-item {
+    float: right;
+    margin-bottom: 20px;
+}
+
+.table-custom thead {
+    background-color: aquamarine;
+}
+
+.table-custom {
+    border: solid;
+    border-color: black;
+}
+
+.form-group {
+    border: none;
+    width: 100%;
+    /* padding: .6em 1em; */
+    margin-bottom: 15px;
+    /* border-radius: .2em; */
+    /* border: 1px solid ; */
+}
+
+.input-form{
+    border: none;
+    /* width: 100%; */
+    /* padding: .6em 1em;
+    margin-bottom: 10px;
+    border-radius: .2em;
+    border: 1px solid ; */
+}
